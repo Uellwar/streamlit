@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-get_ipython().system('pip instal plotly')
-get_ipython().system('pip instal plotly-express')
+get_ipython().system('pip install plotly')
+get_ipython().system('pip install plotly-express')
 get_ipython().system('pip install dash')
 
 import pandas as pd
