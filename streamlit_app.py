@@ -1,16 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[37]:
-
-
 get_ipython().system('pip instal plotly')
 get_ipython().system('pip instal plotly-express')
 get_ipython().system('pip install dash')
-
-
-# In[ ]:
-
 
 import pandas as pd
 import numpy as np
@@ -19,14 +12,7 @@ import dash
 from dash import Dash, dcc, html, Input, Output 
 
 
-# In[4]:
-
-
 df_full = pd.read_csv('dados_limpos/df_full.csv')
-
-
-# In[25]:
-
 
 # Funções
 # Plotagem de histograma(para dados quantitativos) e contagem de valores por classe(para dados categóricos)
@@ -74,9 +60,6 @@ def plot_custom(typevis, df=None,x=None,y=None,titulo=None,histnorm=None, labelx
                     font=dict(color='#8a8d93',size=18),
                     legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1))
   return fig
-
-
-# In[34]:
 
 
 app = Dash(__name__)
@@ -136,16 +119,3 @@ def update_graph(option_slctd):
 # ------------------------------------------------------------------------------
 if __name__ == '__main__':
     app.run_server(debug=True, use_reloader=False)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
